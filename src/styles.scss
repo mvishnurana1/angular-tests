@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "../m3-theme.scss";
+
+@include mat.core();
+
+html {
+  // Apply the light theme by default
+  @include mat.core-theme(m3-theme.$light-theme);
+  @include mat.all-component-themes(m3-theme.$light-theme);
+}
